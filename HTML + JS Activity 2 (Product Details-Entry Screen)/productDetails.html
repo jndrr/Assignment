@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>PRODUCT DETAILS</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="prod.js"></script>
+    </head>
+    <body>
+        <div class="box">
+            <form name="login">
+                <h1>PRODUCT DETAILS</h1>
+                <select name="electronics" id="electronics" class=dropdown onchange="displayPrice()">
+                    <option value="20000">Desktop</option>
+                    <option value="18000">Laptop</option>
+                    <option value="450">Mouse</option>
+                    <option value="675">Speakers</option>
+                </select>
+                <p>Price: <input type="text" id="price"/></p>
+                
+                <input type="radio" id="BlackFridaySale" name="discount" value="0.5" onclick="computeDisc(this.value)">
+                <label for="BlackFridaySale">BlackFridaySale (50% discount)</label><br>
+
+                <input type="radio" id="App10" name="discount" value="0.1" onclick="computeDisc(this.value)">
+                <label for="App10">App10 (10% discount)</label><br>
+
+                <input type="radio" id="App20" name="discount" value="0.2" onclick="computeDisc(this.value)">
+                <label for="App20">App20 (20% discount)</label>
+
+                <p>Discounted Price: <input type="text" style="width: 100px;" id="disc_price" /></p>
+                <input type="button" value="Place Order" onclick="success()" class="createacc_btn">
+            </form>
+        </div>
+    </body>
+    </html>
+</html>
